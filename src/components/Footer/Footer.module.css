@@ -2,9 +2,16 @@
     grid-area: footer;
     align-items: end;
     padding-bottom: 3rem;
+    color: var(--color-white);
+    mix-blend-mode: difference;
 
     & h2 {
         text-transform: uppercase;
+    }
+
+    & a {
+        color: var(--color-white);
+        mix-blend-mode: difference;
     }
 }
 
@@ -20,7 +27,7 @@
     grid-column: 1 / -1;
 
     @media (min-width: 768px) {
-        grid-column: 3 / 5;
+        grid-column: 3 / 8;
     }
 }
 
