@@ -1,0 +1,23 @@
+.staggerText {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 0.8;
+    color: var(--color-black);
+    height: 2rem;
+}
+
+.letterWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+}
+
+.letter {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+}
