@@ -6,9 +6,7 @@ import css from './stills.module.css';
 
 const Stills = () => {
     const [stillsData, setStillsData] = useState<any>(null)
-    const { title, backgroundImage } = stillsData
-    const bgImage = backgroundImage.fields.file.url
-
+    
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -22,6 +20,9 @@ const Stills = () => {
     }, [])
 
     if (!stillsData) return <Loader />
+
+    const { title, backgroundImage } = stillsData
+    const bgImage = backgroundImage?.fields.file.url
 
     return ( 
         <section className={css.stills}>

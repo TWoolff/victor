@@ -6,8 +6,6 @@ import css from './video.module.css';
 
 const Video = () => {
     const [videoData, setVideoData] = useState<any>(null)
-    const { title, backgroundImage } = videoData
-    const bgImage = backgroundImage.fields.file.url
 
     useEffect(() => {
         const fetchData = async () => {
@@ -22,6 +20,9 @@ const Video = () => {
     }, [])
 
     if (!videoData) return <Loader />
+
+    const { title, backgroundImage } = videoData
+    const bgImage = backgroundImage?.fields.file.url
 
     return ( 
         <section className={css.video}>

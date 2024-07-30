@@ -5,9 +5,7 @@ import Loader from '@/components/Loader/Loader';
 
 const Home: React.FC = () => {
     const [indexData, setIndexData] = useState<any>(null)
-    const { title, backgroundImage } = indexData
-    const bgImage = backgroundImage.fields.file.url
-
+    
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -22,8 +20,8 @@ const Home: React.FC = () => {
 
     if (!indexData) return <Loader />
 
-
-    console.log(indexData)
+    const { title, backgroundImage } = indexData
+    const bgImage = backgroundImage?.fields.file.url
 
     return (
         <section className='pagewrapper'>
