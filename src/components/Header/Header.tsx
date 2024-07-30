@@ -13,7 +13,8 @@ const Header: React.FC = () => {
             <nav>
                 <ul>
                     <li><TransitionLink href='/'>Index</TransitionLink></li>
-                    <li><TransitionLink href='/portfolio'>Portfolio</TransitionLink></li>
+                    <li><TransitionLink href='/video'>Video</TransitionLink></li>
+                    <li><TransitionLink href='/stills'>Stills</TransitionLink></li>
                 </ul>
             </nav>
         </header>

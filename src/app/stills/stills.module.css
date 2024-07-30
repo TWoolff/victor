@@ -1,0 +1,14 @@
+.stills {
+    & h1 {
+        color: var(--color-white);
+        mix-blend-mode: difference;
+    }
+}
+
+.stillsBg {
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-black);
+    z-index: -2;
+}

@@ -1,0 +1,14 @@
+.video {
+    & h1 {
+        color: var(--color-white);
+        mix-blend-mode: difference;
+    }
+}
+
+.videoBg {
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-grey);
+    z-index: -2;
+}
