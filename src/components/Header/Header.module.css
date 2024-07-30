@@ -1,6 +1,5 @@
 .header {
     margin-top: 1rem;
-    align-items: center;
     grid-area: header;
     z-index: 1;
     color: var(--color-white);
