@@ -1,4 +1,6 @@
 .stills {
+    grid-column: 1 / -1;
+
     & h1 {
         color: var(--color-white);
         mix-blend-mode: difference;
@@ -15,9 +17,12 @@
 
 .stillsImages {
     display: flex;
+    flex-wrap: no-wrap;
+    gap: 0.5rem;
+    overflow-x: scroll;
 
     & img {
-        width: 3rem;
-        height: auto;
+        width: auto;
+        height: 10rem;
     }
 }
