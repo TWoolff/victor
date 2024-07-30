@@ -21,8 +21,14 @@ const Stills = () => {
 
     if (!stillsData) return <Loader />
 
-    const { title, backgroundImage } = stillsData
+    console.log(stillsData)
+
+    const { title, backgroundImage, images } = stillsData
     const bgImage = backgroundImage?.fields.file.url
+    const stills = images.fields.images.map((image: any) => {
+        const img = image.fields.file.url
+        return <img key={image.sys.id} src={img} alt={image.fields.title} />
+    })
 
     return ( 
         <section className={css.stills}>
@@ -30,6 +36,9 @@ const Stills = () => {
             <div className={css.stillsBg}>
                 {backgroundImage && <div className='bg-img' style={{backgroundImage: `url(${bgImage})`}} />}
             </div>
+            {stills && <div className={css.stillsImages}>
+                {stills}
+            </div>}
         </section>
     );
 }

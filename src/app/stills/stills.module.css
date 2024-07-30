@@ -12,3 +12,12 @@
     background-color: var(--color-black);
     z-index: -2;
 }
+
+.stillsImages {
+    display: flex;
+
+    & img {
+        width: 3rem;
+        height: auto;
+    }
+}
