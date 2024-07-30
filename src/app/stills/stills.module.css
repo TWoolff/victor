@@ -8,10 +8,11 @@
 }
 
 .stillsBg {
-    overflow: hidden;
     position: absolute;
-    inset: 0;
-    background-color: var(--color-black);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
     z-index: -2;
 }
 
@@ -25,4 +26,14 @@
         width: auto;
         height: 10rem;
     }
+
+    & figcaption {
+        font-size: 0.8rem;
+        color: var(--color-white);
+    }
+}
+
+.openedImage {
+    margin-top: 2rem;
+    width: 100%;
 }

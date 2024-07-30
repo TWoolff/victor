@@ -19,6 +19,14 @@ const Video = () => {
         fetchData()
     }, [])
 
+    useEffect(() => {
+        const previousBackgroundColor = document.body.style.backgroundColor;
+        document.body.style.backgroundColor = 'var(--color-grey)';
+        return () => {
+            document.body.style.backgroundColor = previousBackgroundColor;
+        };
+    }, []);
+
     if (!videoData) return <Loader />
 
     const { title, backgroundImage } = videoData
@@ -27,9 +35,9 @@ const Video = () => {
     return ( 
         <section className={css.video}>
             <h1>{title}</h1>
-            <div className={css.videoBg}>
-                {backgroundImage && <div className='bg-img' style={{backgroundImage: `url(${bgImage})`}} />}
-            </div>
+            {backgroundImage && <div className={css.videoBg}>
+                <div className='bg-img' style={{backgroundImage: `url(${bgImage})`}} />
+            </div>}
         </section>
     );
 }

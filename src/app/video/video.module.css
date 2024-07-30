@@ -9,6 +9,5 @@
     overflow: hidden;
     position: absolute;
     inset: 0;
-    background-color: var(--color-grey);
     z-index: -2;
 }
