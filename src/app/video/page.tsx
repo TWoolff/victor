@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
 import { getPage } from '@/utils/contentful';
 import Loader from '@/components/Loader/Loader';
 import css from './video.module.css';
@@ -38,6 +39,12 @@ const Video = () => {
             {backgroundImage && <div className={css.videoBg}>
                 <div className='bg-img' style={{backgroundImage: `url(${bgImage})`}} />
             </div>}
+            <ReactPlayer
+                url='https://www.youtube.com/watch?v=u8_32IG00Qk'
+                controls={true}
+                width='100%'
+                height='100%'
+            />
         </section>
     );
 }
