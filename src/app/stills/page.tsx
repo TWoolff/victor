@@ -6,7 +6,7 @@ import css from './stills.module.css';
 
 const Stills = () => {
     const [stillsData, setStillsData] = useState<any>(null)
-    const [openedImage, setOpenedImage] = useState<string | null>(null);
+    const [opened, setOpened] = useState<string | null>(null);
     
     useEffect(() => {
         const fetchData = async () => {
@@ -39,7 +39,7 @@ const Stills = () => {
             <figure key={image.sys.id}>
                 <a href="#" onClick={(e) => {
                     e.preventDefault();
-                    setOpenedImage(img);
+                    setOpened(img);
                 }}>
                     <img src={img} alt={image.fields.title} />
                 </a>
@@ -55,7 +55,7 @@ const Stills = () => {
                 <div className='bg-img' style={{backgroundImage: `url(${bgImage})`}} />
             </div>}
             {stills && <div className={css.stillsImages}>{stills}</div>}
-            {openedImage && <img src={openedImage} alt="Opened still" className={css.openedImage} />}
+            {opened && <img src={opened} alt="Opened still" className={css.opened} />}
         </section>
     );
 }

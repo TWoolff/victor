@@ -1,6 +1,5 @@
 .video {
     grid-column: 1 / -1;
-    min-height: 100vh;
     margin-bottom: 20rem;
 
     & h1 {
@@ -14,4 +13,23 @@
     position: absolute;
     inset: 0;
     z-index: -2;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: no-wrap;
+    gap: 0.5rem;
+    overflow-x: scroll;
+
+    & img {
+        width: auto;
+        height: 10rem;
+    }
+}
+
+.opened {
+    display: block;
+    margin-top: 2rem;
+    height: 100%;
+    width: 100%;
 }
