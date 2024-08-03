@@ -1,10 +1,10 @@
 'use client'
 import { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { getPage } from '@/utils/contentful';
 import Loader from '@/components/Loader/Loader';
 import css from './video.module.css';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const Video = () => {
     const [videoData, setVideoData] = useState<any>(null)

@@ -5,7 +5,7 @@ import Loader from '@/components/Loader/Loader';
 
 const Home: React.FC = () => {
     const [indexData, setIndexData] = useState<any>(null)
-    
+
     useEffect(() => {
         const fetchData = async () => {
             try {
